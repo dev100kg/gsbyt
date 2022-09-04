@@ -45,7 +45,7 @@ export default {
   },
   mounted() {
     axios
-      .get('http://express.heartrails.com/api/json?method=getPrefectures')
+      .get('https://express.heartrails.com/api/json?method=getPrefectures')
       .then(
         (response) => (this.prefectures = response.data.response.prefecture)
       )
@@ -54,7 +54,7 @@ export default {
     getLines() {
       axios
         .get(
-          'http://express.heartrails.com/api/json?method=getLines&prefecture=' +
+          'https://express.heartrails.com/api/json?method=getLines&prefecture=' +
             this.prefecture
         )
         .then((response) => (this.lines = response.data.response.line))
